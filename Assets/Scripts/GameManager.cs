@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
     public int life=10;
     private EnemySpawner enemySpawner;
+    public Animator lifeAnimator;
+    public Text lifeText;
     void Awake () {
         Instance = this;
         enemySpawner = GetComponent<EnemySpawner> ();
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour {
     }
     public void Failed () {
         life--;
+        lifeText.text="Life:" +life;
+        lifeAnimator.SetTrigger ("Flicker");
         if(life==0){ 
             enemySpawner.stop ();
             endUI.SetActive (true);
