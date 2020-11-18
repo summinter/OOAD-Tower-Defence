@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
     public float speed = 10;
     public float hp=150;
-    public int gold=10;
     private float totalHp;
+    public int gold=10;
     private Transform[] positions;
     private Slider hpSlider;
     private int index = 0;
@@ -54,9 +54,9 @@ public class Enemy : MonoBehaviour {
     }
     void Die(){
         GameObject effect=GameObject.Instantiate(explosionEffect,transform.position,transform.rotation);
-        BulidManager bulidManager=GameObject.FindWithTag("gamemanager").GetComponent<BulidManager>();
-        bulidManager.ChangeMoney(gold);
         Destroy(effect,1.5f);
         Destroy(this.gameObject);
+        BulidManager bulidManager=GameObject.FindWithTag("gamemanager").GetComponent<BulidManager>();
+        bulidManager.ChangeMoney(gold);
     }
 }
