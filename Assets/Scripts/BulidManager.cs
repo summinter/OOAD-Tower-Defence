@@ -23,7 +23,7 @@ public class BulidManager : MonoBehaviour {
 
     public Text moneyText;
     private Animator upgradeCanvasAnimator;
-    void ChangeMoney (int change = 0) {
+    public void ChangeMoney (int change = 0) {
         money += change;
         moneyText.text = "$" + money;
     }

@@ -484,4 +484,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   hp: 150
+  gold: 20
   explosionEffect: {fileID: 4688753034184323130, guid: aa79e55d446719d4e83032d367f28125, type: 3}
