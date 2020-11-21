@@ -37,7 +37,7 @@ public class MapCube : MonoBehaviour {
         GameObject effect = GameObject.Instantiate (buildEffect, transform.position, Quaternion.identity);
         Destroy (effect, 1.5f);
     }
-    void OnMouseEnter () {
+    void OnMouseOver () {
         if (turretGo == null && EventSystem.current.IsPointerOverGameObject () == false) {
             material.color = Color.red;
         }
