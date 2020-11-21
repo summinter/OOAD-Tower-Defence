@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 
     public Wave [] waves;
     public Transform START;
-    public float waveRate=0.2f;
+    public float waveRate=1f;
     public static int CountEnemyAlive=0;
     private Coroutine coroutine;
     void Start() {

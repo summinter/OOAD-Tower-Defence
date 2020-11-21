@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 9565690}
   - component: {fileID: 6513618}
   m_Layer: 0
-  m_Name: Enemy_Bomb
+  m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Enemy : MonoBehaviour {
     public float speed = 10;
     public float hp=150;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour {
         positions = Waypoints.positions;
         totalHp=hp;
         hpSlider=GetComponentInChildren<Slider>();
+        transform.LookAt(positions[index].position);
     }
 
     // Update is called once per frame
@@ -28,9 +30,11 @@ public class Enemy : MonoBehaviour {
     void Move () {
          if (index > positions.Length - 1) {
             ReachDestination();
+            return;
         }
-        if (index > positions.Length - 1) return;
-        transform.Translate ((positions[index].position - transform.position).normalized * Time.deltaTime * speed);
+        transform.LookAt(positions[index].position);
+        // transform.Translate ((positions[index].position - transform.position).normalized * Time.deltaTime * speed);
+        transform.Translate (new Vector3(0,0,1) * Time.deltaTime * speed);
         if (Vector3.Distance (positions[index].position, transform.position) < 0.2f) {
             index++;
         }
