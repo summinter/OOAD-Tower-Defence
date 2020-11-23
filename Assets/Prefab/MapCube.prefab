@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3587788286163280199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.47068405, y: 0.55, z: -6.5217257}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 5, y: 4, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,6 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e080bdfc2ed8c49a68b0f2a85276b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUpgraded: 0
   turretGo: {fileID: 0}
+  turretData:
+    turretPrefab: {fileID: 0}
+    cost: 0
+    turretUpgradedPrefab: {fileID: 0}
+    costUpgraded: 0
+    type: 0
   material: {fileID: 0}
   buildEffect: {fileID: 9128179266509970470, guid: b9e42b1920951e147aa7ee9386988a24, type: 3}
