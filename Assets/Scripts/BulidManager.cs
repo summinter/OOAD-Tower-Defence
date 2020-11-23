@@ -29,6 +29,20 @@ public class BulidManager : MonoBehaviour {
     }
     void Start () {
         upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator> ();
+        switch(EnemySpawner.waveInt){
+            case 1:
+                money=500;
+                break;
+            case 2:
+                money=800;
+                break;
+            case 3:
+                money=1000;
+                break;
+            case 4:
+                money=600;
+                break;
+        }
     }
     void Update () {
         if (Input.GetMouseButtonDown (0)) {
