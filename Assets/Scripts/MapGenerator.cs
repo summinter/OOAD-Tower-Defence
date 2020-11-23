@@ -11,10 +11,13 @@ public class MapGenerator:MonoBehaviour {
     public int roadLength;
     public GameObject Cube;
     public GameObject RoadCube;
+    public GameObject start_object;
+    public GameObject end_object;
 
     // [Range(0,100)]
     // public int randomFillPercent;
-
+    public Walker walker = new Walker();
+    List<int> dirList;
     int[,] map;
 
     public class Walker {
@@ -35,6 +38,7 @@ public class MapGenerator:MonoBehaviour {
     }
 }
     void Start() {
+        dirList = new List<int>();
         GenerateMap();
     }
 
@@ -57,8 +61,14 @@ public class MapGenerator:MonoBehaviour {
     }
     bool WalkingThroughMap(){
         map[0,0] = 0;
-        int[,] new_map = map;
-        Walker walker = new Walker();
+        int[,] new_map = new int[width,height];
+        for (int i = 0; i < width; i++){
+            for (int j = 0; j < height; j++){
+                new_map[i,j] = 1;
+            }
+        }
+        new_map[0,0] = 0;
+        // Walker walker = new Walker();
         int count = 0;
         walker.x = 0;
         walker.y = 0;
@@ -99,7 +109,7 @@ public class MapGenerator:MonoBehaviour {
     }
 
     int JudgeDir(Walker walker, int[,] new_map){
-        List<int> dirList = new List<int>();
+        dirList.Clear();
         //左
         if (walker.x > 1 && map[walker.x - 1, walker.y] != 0 && map[walker.x - 2, walker.y] != 0){
             dirList.Add(1);
@@ -144,6 +154,11 @@ public class MapGenerator:MonoBehaviour {
                     }
                 }
             }
+            Vector3 pos_start = new Vector3(0, .5f, 0);
+            GameObject.Instantiate(start_object, pos_start, Quaternion.identity);
+            Vector3 pos_end = new Vector3(walker.x * 5, .5f, walker.y * 5);
+            GameObject.Instantiate(end_object, pos_end, Quaternion.identity);
+
         }
     }
     

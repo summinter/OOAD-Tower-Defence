@@ -1856,7 +1856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.40741953, y: -0, z: -0, w: 0.91324115}
-  m_LocalPosition: {x: 35.9, y: 26.5, z: -75.2}
+  m_LocalPosition: {x: 35.9, y: 36.22, z: -49.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2848383798621433248, guid: 991a69fbf8687c0498a5400d636935bf, type: 3}
     count: 10
     rate: 0.1
-  START: {fileID: 0}
+  START: {fileID: 4006435460318102000, guid: 699c699daedb53447acbad8eb726cea8, type: 3}
   waveRate: 0.2
 --- !u!4 &1358592278
 Transform:
@@ -2279,13 +2279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471fb5ccb687d6948b2819d9075a2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  height: 10
-  seed: 
-  useRandomSeed: 1
+  width: 20
+  height: 20
+  roadLength: 60
   Cube: {fileID: 3587788286163280199, guid: 4a19f5715957a7648a8990522afb0744, type: 3}
   RoadCube: {fileID: 7120193262334890889, guid: 803f32e2b9a4690479dbde457d6da447, type: 3}
-  randomFillPercent: 47
+  start_object: {fileID: 4006435460318101772, guid: 699c699daedb53447acbad8eb726cea8, type: 3}
+  end_object: {fileID: 2775561412039043386, guid: 704c4fad74855184f8e68514e2d0d833, type: 3}
 --- !u!1 &1450407146
 GameObject:
   m_ObjectHideFlags: 0
