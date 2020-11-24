@@ -111,20 +111,20 @@ public class MapGenerator:MonoBehaviour {
     int JudgeDir(Walker walker, int[,] new_map){
         dirList.Clear();
         //左
-        if (walker.x > 1 && map[walker.x - 1, walker.y] != 0 && map[walker.x - 2, walker.y] != 0){
+        if (walker.x > 1 && new_map[walker.x - 1, walker.y] != 0 && new_map[walker.x - 2, walker.y] != 0){
             dirList.Add(1);
         }
 
         //右
-        if (walker.x < width - 2 && map[walker.x + 1, walker.y] != 0 && map[walker.x + 2, walker.y] != 0){
+        if (walker.x < width - 2 && new_map[walker.x + 1, walker.y] != 0 && new_map[walker.x + 2, walker.y] != 0){
             dirList.Add(2);
         }
         //上
-        if (walker.y > 1 && map[walker.x, walker.y - 1] != 0 && map[walker.x, walker.y - 2] != 0){
+        if (walker.y > 1 && new_map[walker.x, walker.y - 1] != 0 && new_map[walker.x, walker.y - 2] != 0){
             dirList.Add(3);
         }
         //下
-        if (walker.y < height - 2 && map[walker.x, walker.y + 1] != 0 && map[walker.x, walker.y + 2] != 0){
+        if (walker.y < height - 2 && new_map[walker.x, walker.y + 1] != 0 && new_map[walker.x, walker.y + 2] != 0){
             dirList.Add(4);
         }
 
